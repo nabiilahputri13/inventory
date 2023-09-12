@@ -15,11 +15,11 @@ Jawab:
 - HTML (template)
    Jika berupa respon, File HTML akan di-render sebagai tampilan yang akan diberikan kepada client. 
 
-1. Jelaskan mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
+3. Jelaskan mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
 Jawab:
 Virtual environment adalah sebuah tool untuk membuat suatu lingkungan virtual untuk project python yang terisolasi dari project lainnya. Misalnya kita mempunyai 2 project python dan masing-masing membutuhkan suatu paket yang sama dengan versi yang berbeda. Kita dapat membuat aplikasi Django tanpa menggunakan virtualenv tetapi dengan memakai virtual environment, kita bisa mengisolasi environment development kita dan menginstall paket yang dibutuhkan suatu project tanpa bentrok dengan project lainnya.
 
-1. Jelaskan apakah itu MVC, MVT, MVVM dan perbedaan dari ketiganya.
+4. Jelaskan apakah itu MVC, MVT, MVVM dan perbedaan dari ketiganya.
 Jawab:
 - MVC (Model-View-Controller) 
     Model -> Berisi logika bisnis & status data yang ada dalam aplikasi. Bertugas mendapatkan dan memanipulasi data, berkomunikasi dengan Controller dan database, dll.
