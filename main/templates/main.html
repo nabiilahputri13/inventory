@@ -10,25 +10,26 @@
     <p>{{class}}</p>
 
 
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Amount</th>
-            <th>Description</th>
-        </tr>
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
 
-        {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini {% endcomment %}
 
+        <tbody>
         {% for product in products %}
             <tr>
-                <td>{{product.name}}</td>
-                <td>{{product.amount}}</td>
-                <td>{{product.description}}</td>
+                <td scope="row">{{product.name}}</td>
+                <td scope="row">{{product.amount}}</td>
+                <td scope="row">{{product.description}}</td>
             </tr>
+        </tbody>
         {% endfor %}
     </table>
-
-    <br />
 
     <a href="{% url 'main:create_product' %}">
         <button>
@@ -36,4 +37,4 @@
         </button>
     </a>
 
-    {% endblock content %}
+{% endblock content %}
