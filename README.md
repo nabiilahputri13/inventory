@@ -14,7 +14,7 @@ Jawab:
 - models.py (Model)
    Pada models.py terdapat struktur data aplikasi dan tersedia metode untuk berinteraksi dengan database.
 - HTML (template)
-   Jika berupa respon, File HTML akan di-render sebagai tampilan yang akan diberikan kepada client. 
+   Jika berupa respon, File HTML akan di-render sebagai tampilan yang akan diberikan kepada client.
 
 3. Jelaskan mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
 Jawab:
@@ -48,6 +48,7 @@ Jawab:
 TUGAS 3
 1. Apa perbedaan antara form POST dan form GET dalam Django?
    POST akan mengirimkan data/nilai langsung ke file lain untuk ditampung tanpa menampilkan pada URL (umumnya digunakan untuk mengirimkan data penting seperti password dan data pribadi), sementara GET akan menampilkan data/nilai pada URL, kemudian ditampung oleh file lain
+   
 2. Apa perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data?
 - XML adalah adalah bahasa markup yang digunakan untuk mendefinisikan struktur data secara hierarkis. XML sering digunakan untuk pertukaran data antara aplikasi dan sistem yang berbeda, terutama dalam lingkungan yang lebih kompleks seperti aplikasi bisnis dan web services.
   
@@ -65,6 +66,7 @@ Perbedaan utama ketiganya : XML digunakan untuk mendefinisikan struktur data dan
    - JSON tidak hanya digunakan dalam lingkungan JavaScript, tetapi juga dapat diakses dan dimengerti oleh banyak bahasa pemrograman lainnya.
 
 4. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+   
 5. Screenshot Postman
    ![Alt text](Markdown/main.png)
    ![Alt text](Markdown/xml.png)
