@@ -1,11 +1,41 @@
-<h1>Inventory Page</h1>
-<h3>Nabiilah Putri Safa</h3>
-<h3>2206030426</h3>
-<h3>PBP A</h3>
+{% extends 'base.html' %}
 
-<h5>Name: </h5>
-<p>{{ name }}</p> 
-<h5>Amount: </h5>
-<p>{{ amount }}</p> 
-<h5>Description: </h5>
-<p>{{ description }}</p>
+{% block content %}
+    <h1>Inventory Page</h1>
+
+    <h5>Name:</h5>
+    <p>{{name}}</p>
+
+    <h5>Class:</h5>
+    <p>{{class}}</p>
+
+    <p>There are currently {{count}} weapons in the inventory</p>
+
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+        {% for product in products %}
+            <tr>
+                <td scope="row">{{product.name}}</td>
+                <td scope="row">{{product.amount}}</td>
+                <td scope="row">{{product.description}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+
+    <a href="{% url 'main:create_product' %}">
+        <button>
+            Add New Product
+        </button>
+    </a>
+
+{% endblock content %}
