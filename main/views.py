@@ -1,5 +1,5 @@
 import datetime
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponseRedirect, HttpResponse
 from main.forms import ProductForm
 from django.urls import reverse
@@ -86,3 +86,19 @@ def logout_user(request):
     response.delete_cookie('last_login')
     return response
 
+def increment(request, id):
+    product = Product.objects.get(pk=id)
+    product.amount += 1
+    product.save()
+    return HttpResponseRedirect('/')
+
+def decrement(request, id):
+    product = Product.objects.get(pk=id)
+    product.amount = max(0, product.amount-1)
+    product.save()
+    return HttpResponseRedirect('/')
+
+def remove(request, id):
+    product = Product.objects.get(pk=id)
+    product.delete()
+    return HttpResponseRedirect('/')

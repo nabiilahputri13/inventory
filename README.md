@@ -1,3 +1,46 @@
+TUGAS 4
+1. Apa itu Django UserCreationForm, dan jelaskan apa kelebihan dan kekurangannya?
+Jawab:
+UserCreationForm adalah impor formulir bawaan yang memudahkan pembuatan formulir pendaftaran pengguna dalam aplikasi web. Dengan formulir ini, pengguna baru dapat mendaftar dengan mudah di situs web Anda tanpa harus menulis kode dari awal.
+
+2. Apa perbedaan antara autentikasi dan otorisasi dalam konteks Django, dan mengapa keduanya penting?
+Jawab:
+Autentikasi di Django adalah proses verifikasi identitas pengguna, memastikan bahwa mereka adalah siapa yang mereka klaim. Sementara otorisasi adalah tentang mengendalikan izin akses pengguna terhadap berbagai sumber daya dan fitur dalam aplikasi. Autentikasi melindungi akun pengguna, sementara otorisasi melindungi data dan fitur dari akses yang tidak diizinkan. Kedua konsep ini bersama-sama menciptakan sistem keamanan yang kokoh dalam aplikasi Django, memastikan bahwa hanya pengguna yang sah dengan izin yang sesuai yang dapat mengakses dan berinteraksi dengan sumber daya aplikasi.
+
+3. Apa itu cookies dalam konteks aplikasi web, dan bagaimana Django menggunakan cookies untuk mengelola data sesi pengguna?
+Jawab:
+Cookie HTTP (juga disebut cookie web, cookie Internet, cookie browser, atau cookie sederhana) adalah sepotong kecil data yang dikirim dari situs web dan disimpan di komputer pengguna oleh browser web pengguna saat pengguna berselancar.
+
+Teknologi ini dirancang untuk menjadi mekanisme andal bagi situs web untuk mengingat informasi stateful (seperti barang yang ditambahkan dalam keranjang belanja di toko online) atau untuk merekam aktivitas penelusuran pengguna.
+
+Mereka juga dapat digunakan untuk mengingat potongan informasi dan data yang sebelumnya dimasukkan pengguna ke dalam bidang formulir seperti nama, alamat, kata sandi, dan nomor kartu kredit.
+
+Sebuah situs biasanya akan memberikan notifikasi terkait penggunaan cookie ketika pengguna baru mengunjungi web tersebut. Pengguna bisa mengelola cookie sesuai dengan keinginannya melalui pengaturan browser.
+
+Berikut adalah beberapa kegunaan & fungsi cookies :
+- Menyimpan informasi login
+- Menyimpan pengaturan website
+- Menyediakan konten lebih personal
+- Menampilkan iklan
+
+Berikut adalah langkah-langkah umum bagaimana Django menggunakan cookies untuk mengelola sesi pengguna:
+- Inisialisasi Proyek Django: Dalam berkas settings.py, kita dapat mengatur berbagai parameter yang berkaitan dengan penggunaan cookies dan sesi dalam berkas ini, seperti jenis penyimpanan yang akan digunakan.
+- Membuat Objek Sesi: Saat pengguna mengunjungi situs web kita, Django akan membuat objek sesi unik untuk mereka. Objek sesi ini dapat digunakan untuk menyimpan data pengguna, seperti preferensi, keranjang belanja, atau data sesi lainnya.
+- Menyimpan Data dalam Sesi: Anda dapat menyimpan data dalam sesi pengguna
+
+4. Apakah penggunaan cookies aman secara default dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai?
+Jawab:
+Penggunaan cookies dalam pengembangan web bisa aman, tetapi ada risiko yang perlu diwaspadai. Berikut adalah beberapa risiko potensial yang perlu diwaspadai saat menggunakan cookies:
+- Pelanggaran Privasi: Cookies dapat digunakan untuk melacak perilaku pengguna di situs web, dan jika data pribadi atau sensitif disimpan dalam cookies, ada potensi pelanggaran privasi. Oleh karena itu, sangat penting untuk melindungi data pribadi pengguna dan hanya menyimpan data yang diperlukan.
+- Cross-Site Scripting (XSS): Jika cookies digunakan untuk menyimpan data yang diambil dari input pengguna tanpa penyaringan yang tepat, maka aplikasi Anda dapat rentan terhadap serangan XSS. Dalam serangan XSS, penyerang dapat mencoba mencuri cookies pengguna atau menjalankan kode berbahaya di perangkat pengguna.
+- Session Hijacking: Cookies yang digunakan untuk mengidentifikasi sesi pengguna (session cookies) harus dijaga dengan baik. Jika sesi pengguna dapat diambil alih (hijacked), penyerang dapat mengakses akun pengguna tanpa izin.
+- Cookies yang Tidak Aman: Pengaturan cookie yang tidak aman, seperti mengizinkan cookie berjalan melalui HTTP tanpa enkripsi SSL/TLS, dapat membuka peluang bagi penyerang untuk mengambil alih atau mencuri cookies.
+- Penyimpanan Berlebihan: Penyimpanan berlebihan atau penggunaan cookies yang tidak perlu dapat memperlambat kinerja situs web dan membebani pengguna.
+
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+Jawab:
+
+   
 TUGAS 3
 1. Apa perbedaan antara form POST dan form GET dalam Django?
    POST akan mengirimkan data/nilai langsung ke file lain untuk ditampung tanpa menampilkan pada URL (umumnya digunakan untuk mengirimkan data penting seperti password dan data pribadi), sementara GET akan menampilkan data/nilai pada URL, kemudian ditampung oleh file lain

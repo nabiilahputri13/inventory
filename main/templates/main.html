@@ -17,6 +17,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Amount</th>
                 <th scope="col">Description</th>
+                <th scope="col"></th>
             </tr>
         </thead>
 
@@ -27,6 +28,23 @@
                 <td scope="row">{{product.name}}</td>
                 <td scope="row">{{product.amount}}</td>
                 <td scope="row">{{product.description}}</td>
+                <td scope="row">
+                    <a href ="{% url 'main:increment' product.id %}">
+                        {% csrf_token %}
+                        <button name="increment">+</button>
+                    </a>
+
+                    <a href ="{% url 'main:decrement' product.id %}">
+                        {% csrf_token %}
+                        <button name="decrement">-</button>
+                    </a>
+                </td>
+                <td scope="row">
+                    <a href = "{% url 'main:remove' product.id %}"
+                        {% csrf_token %}
+                        <button name="remove">Remove Item</button>
+                </td>
+                
             </tr>
         </tbody>
         {% endfor %}
