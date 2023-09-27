@@ -3,6 +3,18 @@ TUGAS 4
 Jawab:
 UserCreationForm adalah impor formulir bawaan yang memudahkan pembuatan formulir pendaftaran pengguna dalam aplikasi web. Dengan formulir ini, pengguna baru dapat mendaftar dengan mudah di situs web Anda tanpa harus menulis kode dari awal.
 
+Kelebihan:
+- Mudah digunakan dan cepat diimplementasikan.
+- Validasi otomatis untuk mengurangi kesalahan input.
+- Dukungan untuk integrasi dengan sistem otentikasi Open Authorization.
+- Fleksibilitas untuk penyesuaian tampilan dan perilaku.
+
+Kekurangan:
+- Keterbatasan kustomisasi untuk proyek yang lebih kompleks.
+- Bergantung pada model User bawaan Django.
+- Tampilan bawaan mungkin memerlukan penyesuaian desain.
+- Mungkin memerlukan penyesuaian tambahan untuk UI atau logika bisnis yang kompleks.
+
 2. Apa perbedaan antara autentikasi dan otorisasi dalam konteks Django, dan mengapa keduanya penting?
 Jawab:
 Autentikasi di Django adalah proses verifikasi identitas pengguna, memastikan bahwa mereka adalah siapa yang mereka klaim. Sementara otorisasi adalah tentang mengendalikan izin akses pengguna terhadap berbagai sumber daya dan fitur dalam aplikasi. Autentikasi melindungi akun pengguna, sementara otorisasi melindungi data dan fitur dari akses yang tidak diizinkan. Kedua konsep ini bersama-sama menciptakan sistem keamanan yang kokoh dalam aplikasi Django, memastikan bahwa hanya pengguna yang sah dengan izin yang sesuai yang dapat mengakses dan berinteraksi dengan sumber daya aplikasi.
@@ -22,11 +34,14 @@ Berikut adalah beberapa kegunaan & fungsi cookies :
 - Menyimpan pengaturan website
 - Menyediakan konten lebih personal
 - Menampilkan iklan
-
-Berikut adalah langkah-langkah umum bagaimana Django menggunakan cookies untuk mengelola sesi pengguna:
-- Inisialisasi Proyek Django: Dalam berkas settings.py, kita dapat mengatur berbagai parameter yang berkaitan dengan penggunaan cookies dan sesi dalam berkas ini, seperti jenis penyimpanan yang akan digunakan.
-- Membuat Objek Sesi: Saat pengguna mengunjungi situs web kita, Django akan membuat objek sesi unik untuk mereka. Objek sesi ini dapat digunakan untuk menyimpan data pengguna, seperti preferensi, keranjang belanja, atau data sesi lainnya.
-- Menyimpan Data dalam Sesi: Anda dapat menyimpan data dalam sesi pengguna
+  
+Langkah-langkah Django menggunakan cookies untuk mengelola sesi pengguna:
+- Konfigurasi Settings: Pada settings.py, pastikan 'django.contrib.sessions.middleware.SessionMiddleware' sudah ada dalam daftar middleware.
+- Cookies Sesi: Ketika pengguna pertama kali mengunjungi situs web Django Anda, server akan menghasilkan cookie sesi khusus yang akan dikirim ke peramban pengguna. Cookie ini berisi identifikasi unik sesi pengguna, biasanya berupa string panjang.
+- Penyimpanan Data Sesi: Data sesi pengguna sebenarnya disimpan di sisi server, biasanya dalam database atau dalam penyimpanan cache yang dapat dikonfigurasi. Django memiliki pengaturan untuk mengonfigurasi penyimpanan sesi.
+- Penggunaan Cookies: Setiap kali pengguna membuat permintaan selanjutnya ke server, cookie sesi akan dikirim bersama permintaan. Server kemudian akan mengidentifikasi sesi pengguna berdasarkan nilai unik dalam cookie tersebut.
+- Mengakses Data Sesi: Kita dapat mengakses dan memanipulasi data sesi pengguna dengan mudah di tampilan Django menggunakan objek request.session. Ini adalah cara yang aman untuk menyimpan data sesi pengguna karena data sesi sebenarnya tidak ada di sisi klien.
+- Kadaluwarsa Sesi: Django akan mengatur masa berlaku sesi secara otomatis. Kita dapat mengkonfigurasi berapa lama sesi akan berlangsung dengan mengatur SESSION_COOKIE_AGE dalam pengaturan (settings.py).
 
 4. Apakah penggunaan cookies aman secara default dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai?
 Jawab:
@@ -39,6 +54,7 @@ Penggunaan cookies dalam pengembangan web bisa aman, tetapi ada risiko yang perl
 
 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 Jawab:
+Saya membaca dan mempelajari tutorial 3 lalu sayaa juga mencari tahu lebih lanjut tentang register, login dan logout dan membaca laman web https://ordinarycoders.com/blog/article/django-user-register-login-logout, kemudian saya juga membaca penjelasan-penjelasan tentaang Cookies dan Session https://www.dcs.gla.ac.uk/~leif/di/tutorial/cookie.html, emudian barulah saya mengimplementasikannya pada tugas 4 PBP ini.
 
    
 TUGAS 3
