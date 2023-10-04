@@ -53,24 +53,24 @@ a[href^="http"] {
 
 2. Jelaskan HTML5 Tag yang kamu ketahui.
 Jawab:
-- /<!DOCTYPE html>: Ini adalah deklarasi tipe dokumen yang digunakan dalam dokumen HTML5 untuk menunjukkan jenis dokumen HTML yang digunakan.
-- /<html>: Ini adalah elemen root dari setiap halaman HTML. Semua elemen HTML lainnya berada di dalamnya.
-- /<head>: Ini adalah elemen yang berisi informasi meta-data tentang dokumen HTML, seperti judul halaman, tautan ke stylesheet, dan karakter encoding.
-- /<title>: Ini digunakan untuk menentukan judul halaman yang akan ditampilkan di tab atau judul jendela peramban.
-- /<meta>: Elemen ini digunakan untuk mengatur karakter encoding dokumen, deskripsi, dan meta-data lainnya yang terkait dengan halaman.
-- /<link>: Digunakan untuk menghubungkan dokumen HTML dengan stylesheet eksternal atau ikon favicon.
-- /<style>: Elemen ini dapat digunakan untuk menambahkan gaya CSS langsung ke dalam dokumen HTML
-- /<script>: Ini adalah elemen yang digunakan untuk memasukkan skrip JavaScript ke dalam dokumen.
-- /<body>: Ini adalah elemen yang berisi konten tampilan halaman web, seperti teks, gambar, tautan, formulir, dan elemen-elemen lainnya.
-- /<header>: Elemen ini biasanya digunakan untuk mengelompokkan elemen-elemen yang terkait dengan bagian kepala halaman web, seperti logo, judul, dan navigasi.
-- /<nav>: Ini digunakan untuk mengelompokkan tautan navigasi utama atau menu.
-- /<section>: Ini digunakan untuk mengelompokkan konten yang memiliki konteks atau tema yang sama.
-- /<footer>: Ini adalah elemen yang digunakan untuk mengelompokkan konten yang berada di bagian bawah halaman, seperti informasi kontak atau hak cipta.
-- /<form>: Digunakan untuk membuat formulir interaktif yang memungkinkan pengguna mengirimkan data ke server.
-- /<input>: Elemen ini digunakan dalam formulir untuk menambahkan berbagai jenis input, seperti teks, kata sandi, kotak centang, dan lain-lain.
-- /<button>: Ini digunakan untuk membuat tombol yang dapat diklik oleh pengguna.
-- /<label>: Digunakan untuk memberikan label atau teks penjelasan untuk elemen input dalam formulir.
-- /<textarea>: Digunakan untuk membuat area teks yang lebih besar, seperti kolom komentar dalam formulir.
+- \<!DOCTYPE html>: Ini adalah deklarasi tipe dokumen yang digunakan dalam dokumen HTML5 untuk menunjukkan jenis dokumen HTML yang digunakan.
+- \<html>: Ini adalah elemen root dari setiap halaman HTML. Semua elemen HTML lainnya berada di dalamnya.
+- \<head>: Ini adalah elemen yang berisi informasi meta-data tentang dokumen HTML, seperti judul halaman, tautan ke stylesheet, dan karakter encoding.
+- \<title>: Ini digunakan untuk menentukan judul halaman yang akan ditampilkan di tab atau judul jendela peramban.
+- \<meta>: Elemen ini digunakan untuk mengatur karakter encoding dokumen, deskripsi, dan meta-data lainnya yang terkait dengan halaman.
+- \<link>: Digunakan untuk menghubungkan dokumen HTML dengan stylesheet eksternal atau ikon favicon.
+- \<style>: Elemen ini dapat digunakan untuk menambahkan gaya CSS langsung ke dalam dokumen HTML
+- \<script>: Ini adalah elemen yang digunakan untuk memasukkan skrip JavaScript ke dalam dokumen.
+- \<body>: Ini adalah elemen yang berisi konten tampilan halaman web, seperti teks, gambar, tautan, formulir, dan elemen-elemen lainnya.
+- \<header>: Elemen ini biasanya digunakan untuk mengelompokkan elemen-elemen yang terkait dengan bagian kepala halaman web, seperti logo, judul, dan navigasi.
+- \<nav>: Ini digunakan untuk mengelompokkan tautan navigasi utama atau menu.
+- \<section>: Ini digunakan untuk mengelompokkan konten yang memiliki konteks atau tema yang sama.
+- \<footer>: Ini adalah elemen yang digunakan untuk mengelompokkan konten yang berada di bagian bawah halaman, seperti informasi kontak atau hak cipta.
+- \<form>: Digunakan untuk membuat formulir interaktif yang memungkinkan pengguna mengirimkan data ke server.
+- \<input>: Elemen ini digunakan dalam formulir untuk menambahkan berbagai jenis input, seperti teks, kata sandi, kotak centang, dan lain-lain.
+- \<button>: Ini digunakan untuk membuat tombol yang dapat diklik oleh pengguna.
+- \<label>: Digunakan untuk memberikan label atau teks penjelasan untuk elemen input dalam formulir.
+- \<textarea>: Digunakan untuk membuat area teks yang lebih besar, seperti kolom komentar dalam formulir.
 
 3. Jelaskan perbedaan antara margin dan padding.
 Jawab:
