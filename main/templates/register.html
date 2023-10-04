@@ -1,34 +1,77 @@
-{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style type="text/css"></style>
+        {% block meta %}
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        {% endblock meta %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css"/>
 
-{% block meta %}
-    <title>Register</title>
-{% endblock meta %}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Prata&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fanwood+Text&family=Libre+Baskerville&family=Prata&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
 
-{% block content %}  
+    {% block content %}
+    <body style="background-color: #FFF5E4;">
+        <nav class="navbar navbar-dark" style="background-color: #FF9494;">
+            <a class="navbar-brand" href="#" style="font-family: 'Prata', serif; font-size: x-large;">Inventory101</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            </button>
+            </div>
+        </nav>
 
-<div class = "login">
-    
-    <h1>Register</h1>  
+        <div class="register">
+            <h1 style="text-align: center; font-family: 'Prata', serif; color: #1f130b; margin-top: 100px;">Register</h1>
+        </div>
 
-        <form method="POST" >  
-            {% csrf_token %}  
-            <table>  
-                {{ form.as_table }}  
-                <tr>  
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Daftar"/></td>  
-                </tr>  
-            </table>  
-        </form>
+        <div class="container">
+            <form method="POST" action="" class="mx-auto">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Username</label>
+                    <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+                    <small id="emailHelp" class="form-text text-muted">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</small>
+                </div>
 
-    {% if messages %}  
-        <ul>   
-            {% for message in messages %}  
-                <li>{{ message }}</li>  
-                {% endfor %}  
-        </ul>   
-    {% endif %}
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" name="password1" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <small id="emailHelp" class="form-text text-muted">
+                        <ul>
+                            <li>Your password can't be too similar to your other personal information.</li>
+                            <li>Your password must contain at least 8 characters.</li>
+                            <li>Your password can't be a commonly used password.</li>
+                            <li>Your password can't be entirely numeric.</li>
+                        </ul>
+                    </small>
+                </div>
 
-</div>  
+                <div class="form-group">
+                    <label for="exampleInputPassword2">Password confirmation</label>
+                    <input type="password" name="password2" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                    <small id="emailHelp" class="form-text text-muted">Enter the same password as before, for verification.</small>
+                </div>
 
-{% endblock content %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-success" role="alert" style="margin-top: 20px;">
+                    {{message}}
+                </div>
+                {% endfor %}
+                {% endif %}
+
+                <button type ="submit" value="Daftar" class="btn btn-primary" style="font-family: 'Prata', serif; background-color: #EE6983; border: 0;">
+                    Register
+                </button>
+            </form>
+        </div>
+    </body>
+
+        
+    {% endblock content %}

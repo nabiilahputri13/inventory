@@ -9,6 +9,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages  
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from .forms import CustomRegistrationForm
+from django.contrib.auth.models import User
 
 @login_required(login_url='/login')
 # Create your views here.
@@ -54,15 +56,15 @@ def show_json_by_id(request, id):
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 def register(request):
-    form = UserCreationForm()
+    form = CustomRegistrationForm()
 
     if request.method == "POST":
-        form = UserCreationForm(request.POST)
+        form = CustomRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, 'Your account has been successfully created!')
             return redirect('main:login')
-    context = {'form':form}
+    context = {'form': form}
     return render(request, 'register.html', context)
 
 def login_user(request):

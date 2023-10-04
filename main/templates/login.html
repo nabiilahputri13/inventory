@@ -1,45 +1,66 @@
-{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style type="text/css"></style>
+        {% block meta %}
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        {% endblock meta %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css"/>
 
-{% block meta %}
-    <title>Login</title>
-{% endblock meta %}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Prata&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fanwood+Text&family=Libre+Baskerville&family=Prata&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
 
-{% block content %}
+    {% block content %}
+    <body style="background-color: #FFF5E4;">
+        <nav class="navbar navbar-dark" style="background-color: #FF9494;">
+            <a class="navbar-brand" href="#" style="font-family: 'Prata', serif; font-size: x-large;">Inventory101</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            </button>
+            </div>
+        </nav>
 
-<div class = "login">
+        <div class="login">
+            <h1 style="text-align: center; font-family: 'Prata', serif; color: #1f130b; margin-top: 100px;">Login</h1>
+        </div>
 
-    <h1>Login</h1>
+        <div class="container">
+            <form method="POST" action="" class="mx-auto">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Username</label>
+                    <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+                </div>
 
-    <form method="POST" action="">
-        {% csrf_token %}
-        <table>
-            <tr>
-                <td>Username: </td>
-                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
-            </tr>
-                    
-            <tr>
-                <td>Password: </td>
-                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
-            </tr>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
 
-            <tr>
-                <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
-            </tr>
-        </table>
-    </form>
+                <button type ="submit" value="login" class="btn btn-primary" style="font-family: 'Prata', serif; background-color: #EE6983; border: 0;">
+                    Login
+                </button>
+            </form>
 
-    {% if messages %}
-        <ul>
-            {% for message in messages %}
-                <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}     
+            {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-danger" role="alert" style="margin-top: 20px;">
+                    {{message}}
+                </div>
+                {% endfor %}
+        {% endif %}
+
+        Don't have an account yet? <a href="{% url 'main:register' %}">Register Now</a>
+    
+    </div>
+        </div>
         
-    Don't have an account yet? <a href="{% url 'main:register' %}">Register Now</a>
 
-</div>
 
-{% endblock content %}
+        {% endblock content %}
