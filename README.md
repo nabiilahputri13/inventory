@@ -81,11 +81,10 @@ Margin tidak memiliki latar belakang atau warna, dan tidak dapat diisi dengan ko
 - Padding adalah ruang di dalam elemen, antara konten elemen dan batas kotak dalam elemen tersebut.
 Padding dapat memiliki latar belakang dan warna, sehingga Anda dapat mengisi ruang ini dengan warna atau gambar latar belakang.
 Padding memengaruhi ruang di dalam elemen, dan tidak memengaruhi jarak antara elemen dengan elemen lainnya. Ini berpengaruh pada tampilan dan tata letak konten dalam elemen.
-Anda dapat mengatur padding atas, bawah, kiri, dan kanan secara terpisah menggunakan properti padding-top, padding-bottom, padding-left, dan padding-right.
 
 ![Alt text](<Markdown/perbedaan margin padding.png>)
 
-4. Jelaskan perbedaan antara framework CSS Tailwind dan Bootstrap. Kapan sebaiknya kita menggunakan Bootstrap daripada Tailwind, dan sebaliknya?
+1. Jelaskan perbedaan antara framework CSS Tailwind dan Bootstrap. Kapan sebaiknya kita menggunakan Bootstrap daripada Tailwind, dan sebaliknya?
 Jawab:
 Dari segi desain
 - Bootstrap menawarkan set class CSS dan komponen yang telah dirancang sebelumnya dengan tampilan yang cukup terstruktur dan konsisten. Ini cocok untuk proyek dengan desain tradisional yang membutuhkan kerangka kerja yang stabil dan mudah digunakan.
