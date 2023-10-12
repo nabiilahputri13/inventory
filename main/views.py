@@ -1,6 +1,6 @@
 import datetime
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, HttpResponseNotFound, JsonResponse
 from main.forms import ProductForm
 from django.urls import reverse
 from main.models import Product
@@ -11,6 +11,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from .forms import CustomRegistrationForm
 from django.contrib.auth.models import User
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_POST
 
 @login_required(login_url='/login')
 # Create your views here.
@@ -104,3 +106,41 @@ def remove(request, id):
     product = Product.objects.get(pk=id)
     product.delete()
     return HttpResponseRedirect('/')
+
+def get_product_json(request):
+    product_item = Product.objects.all()
+    return HttpResponse(serializers.serialize('json', product_item))
+
+@csrf_exempt
+def add_product_ajax(request):
+    if request.method == 'POST':
+        name = request.POST.get("name")
+        amount = request.POST.get("amount")
+        description = request.POST.get("description")
+        user = request.user
+
+        new_product = Product(name=name, amount=amount, description=description, user=user)
+        new_product.save()
+
+        return HttpResponse(b"CREATED", status=201)
+
+    return HttpResponseNotFound()
+
+# @require_POST
+# @csrf_exempt
+# def remove_product_ajax(request, id):
+#     product = get_object_or_404(Product, pk=id)
+#     product.delete()
+#     return HttpResponseRedirect('/')
+
+# @require_POST
+# @csrf_exempt
+# def remove_product_ajax(request, id):
+#     try:
+#         product = Product.objects.get(pk=id)
+#         product.delete()
+#         response_data = {'message': 'Product deleted successfully'}
+#         return JsonResponse(response_data)
+#     except Product.DoesNotExist:
+#         response_data = {'message': 'Product not found'}
+#         return JsonResponse(response_data, status=404)

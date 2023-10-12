@@ -1,3 +1,58 @@
+TUGAS 6
+1. Jelaskan perbedaan antara asynchronous programming dengan synchronous programming.
+Jawab:
+- Synchronous Programming (Program Sinkron):
+Dalam pemrograman sinkron, tugas dieksekusi satu per satu dalam urutan yang telah ditentukan. Ini berarti bahwa jika satu tugas memerlukan waktu yang lama untuk menyelesaikan (misalnya, memuat data dari server), seluruh program akan terhenti dan menunggu tugas tersebut selesai sebelum melanjutkan ke tugas berikutnya.
+Program sinkron cenderung lebih mudah dipahami karena urutan eksekusi tugasnya jelas dan mudah diprediksi.
+
+- Asynchronous Programming (Program Asinkron):
+Dalam pemrograman asinkron, tugas-tugas yang memerlukan waktu yang lama dieksekusi secara non-blok. Ini berarti bahwa program tidak menunggu tugas tersebut selesai dan dapat melanjutkan menjalankan tugas lain tanpa terhenti.
+Program asinkron sering digunakan dalam situasi di mana kinerja dan responsivitas program sangat penting, seperti aplikasi berbasis web yang harus merespons permintaan dari banyak pengguna secara bersamaan.
+Untuk mengimplementasikan pemrograman asinkron, biasanya digunakan konsep seperti callback, promise, atau async/await dalam bahasa pemrograman tertentu.
+
+2. Dalam penerapan JavaScript dan AJAX, terdapat penerapan paradigma event-driven programming. Jelaskan maksud dari paradigma tersebut dan sebutkan salah satu contoh penerapannya pada tugas ini.
+Jawab:
+Paradigma event-driven programming adalah cara pemrograman di mana program merespons kejadian atau peristiwa yang terjadi, seperti tindakan pengguna (klik tombol, mengisi formulir, dll.) atau kejadian lainnya (penerimaan data dari server, pengaktifan waktu tertentu, dll.). Program akan menjalankan tindakan tertentu ketika kejadian terjadi, dan hal ini memungkinkan program untuk berperilaku secara responsif dan interaktif.
+
+Dalam JavaScript dan penerapan AJAX (Asynchronous JavaScript and XML), paradigma event-driven programming sangat umum. Sebuah contoh penerapannya adalah penggunaan event listeners. Event listeners digunakan untuk mendengarkan dan menanggapi peristiwa yang terjadi pada elemen HTML atau objek JavaScript tertentu. Ketika peristiwa terjadi, fungsi yang telah ditentukan sebelumnya akan dieksekusi.
+
+Contoh paradigma event-driven pada tugas ini adalah penggunaan event listener.
+
+        document.getElementById("button_add").onclick = addProduct
+
+Ketika kita mengklik button yang memiliki id "button_add" maka fungsi addProduct akan dijalankan.
+
+3. Jelaskan penerapan asynchronous programming pada AJAX.
+Jawab:
+AJAX merupakan sebuah teknologi yang memadukan peramban web (untuk meminta data dari web server) dengan JavaScript dan HTML DOM (untuk menampilkan data). AJAX dapat menggunakan XML, teks, atau JSOn untuk mengirim data. AJAX dapat memperbarui data tanpa harus me-reload halaman web. AJAX bekerja secara asinkronus dengan mengirimkan data ke server di balik layar.
+
+Cara kerja AJAX:
+
+- Browser akan memanggil AJAX javascript untuk mengaktifkan XMLHttpRequest dan mengirimkan HTTP Request ke server.
+- XMLHttpRequest dibuat untuk proses pertukaran data di server secara asinkron.
+- Server menerima, memproses, dan mengirimkan data kembali ke browser.
+- Browser menerima data tersebut dan langsung ditampilkan di halaman website, tanpa perlu reload atau membuat halaman baru.
+
+![Alt text](Markdown/ajax.png)
+
+4. Pada PBP kali ini, penerapan AJAX dilakukan dengan menggunakan Fetch API daripada library jQuery. Bandingkanlah kedua teknologi tersebut dan tuliskan pendapat kamu teknologi manakah yang lebih baik untuk digunakan.
+Jawab:
+Fetch API:
+- Menyediakan interface bersih dan berbasis Promise untuk mengelola permintaan HTTP dan respons dari server.
+- Mendukung berbagai jenis data seperti JSON, teks, XML, dan lainnya.
+- Lebih ringan karena merupakan bagian dari JavaScript modern, tanpa perlu unduhan atau instalasi library tambahan.
+
+jQuery:
+- Library JavaScript yang komprehensif dengan banyak fitur, termasuk kemampuan untuk melakukan AJAX.
+- Memiliki banyak sumber daya dan plugin yang tersedia.
+- Ukurannya lebih besar sehingga dapat meningkatkan beban halaman web jika hanya digunakan untuk fitur-fitur AJAX.
+  
+Menurut saya, keduanya memiliki kelebihan dan kekurangan masing-masing sehingga kembali lagi kepada programmer. Jika programmer ingin mengurangi ukuran dan beban halaman web, maka dapat menggunakan Fetch API karena lebih ringan, namun jika programmer ingin membuat interface yang lebih advanced, dapat menggunakan jQuery.
+
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+Jawab:
+Saya mempelajari tutorial, lalu saya juga membaca artikel tentang method-method AJAX https://www.w3schools.com/jquery/jquery_ajax_get_post.asp, mencari tahu lebih dalam tentang AJAX https://www.w3schools.com/whatis/whatis_ajax.asp, saya juga mempelajari bagaimana memunculkan modal https://youtu.be/6E_NeVjxCdE?si=pCpT6Tzf0p4DnwQ_, dan baru saya mencobanya pada tugas ini. Dalam prosesnya, saya sedikit kebingungan mengimplementasikannya, namun setelah saya bertanya kepada teman dan asdos, serta beberapa kali percobaan, Alhamdulillah saya berhasil menyelesaikan tugas 6 ini.
+
 TUGAS 5
 1. Jelaskan manfaat dari setiap element selector dan kapan waktu yang tepat untuk menggunakannya.
 Jawab:
