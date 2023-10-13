@@ -1,4 +1,7 @@
 TUGAS 6
+
+http://nabiilah-putri-tugas.pbp.cs.ui.ac.id
+
 1. Jelaskan perbedaan antara asynchronous programming dengan synchronous programming.
 Jawab:
 - Synchronous Programming (Program Sinkron):
