@@ -27,31 +27,40 @@
         </nav>
 
         <div class="login">
-            <h1 style="text-align: center; font-family: 'Prata', serif; color: #1f130b; margin-top: 100px;">Add New Item</h1>
+            <h1 style="text-align: center; font-family: 'Prata', serif; color: #1f130b; margin-top: 100px;">Login</h1>
         </div>
 
         <div class="container">
             <form method="POST" action="" class="mx-auto">
                 {% csrf_token %}
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Name</label>
-                    <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter item name">
+                    <label for="exampleInputEmail1">Username</label>
+                    <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
                 </div>
 
-                <div class="form-outline">
-                    <label for="typeNumber">Amount</label>
-                    <input value="1" name="amount" type="number" id="typeNumber" class="form-control" />
-                </div>
-
-                <div class="form-outline mb-4">
-                    <label class="form-label" for="form4Example3">Description</label>
-                    <textarea class="form-control" name="description" ="form4Example3" rows="4" placeholder="Enter description"></textarea>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
 
                 <button type ="submit" value="login" class="btn btn-primary" style="font-family: 'Prata', serif; background-color: #EE6983; border: 0;">
-                    Add Item
+                    Login
                 </button>
             </form>
-        </div>
 
-    {% endblock content %}
+            {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-danger" role="alert" style="margin-top: 20px;">
+                    {{message}}
+                </div>
+                {% endfor %}
+        {% endif %}
+
+        Don't have an account yet? <a href="{% url 'main:register' %}">Register Now</a>
+    
+    </div>
+        </div>
+        
+
+
+        {% endblock content %}
